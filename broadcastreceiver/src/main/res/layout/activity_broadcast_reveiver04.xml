@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BroadcastReveiverActivity04">
+
+    <Button
+        android:id="@+id/btn_broad04_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册广播接受器"/>
+    <Button
+        android:id="@+id/btn_broad04_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注销广播接受器"/>
+    <Button
+        android:id="@+id/btn_broad04_03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送广播"/>
+</LinearLayout>
