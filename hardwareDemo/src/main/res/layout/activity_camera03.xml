@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/camera_activity03_rl"
+    tools:context="com.cblue.hardware.CameraActivity03">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/camare_activity03_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"/>
+
+
+    <Button
+        android:layout_below="@id/camare_activity03_iv"
+        android:id="@+id/camera_activity03_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置头像"/>
+
+
+
+</RelativeLayout>
