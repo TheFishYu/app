@@ -17,7 +17,7 @@ public class StartService03 extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        mediaPlayer = MediaPlayer.create(this, R.raw.people);
+        mediaPlayer = MediaPlayer.create(this, R.raw.chuangqian);
         //设置是否循环播放
         mediaPlayer.setLooping(true);
     }

@@ -28,7 +28,7 @@ public class BoundService02 extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        mediaplayer = MediaPlayer.create(getApplicationContext(), R.raw.people);
+        mediaplayer = MediaPlayer.create(getApplicationContext(), R.raw.qianshiqingren);
         mediaplayer.setLooping(true);
     }
 

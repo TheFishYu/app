@@ -27,7 +27,7 @@ public class RecyclerViewDivider extends RecyclerView.ItemDecoration {
         //得到画笔
         if (paint == null) {
             paint = new Paint();
-            paint.setColor(Color.BLUE);
+            paint.setColor(Color.WHITE);
         }
         if (itemcount > 0) {
             for (int i = 0; i < itemcount; i++) {

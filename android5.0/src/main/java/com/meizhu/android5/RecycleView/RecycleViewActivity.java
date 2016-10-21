@@ -37,7 +37,7 @@ public class RecycleViewActivity extends AppCompatActivity {
         recyclerView.setAdapter(recyclerViewAdapter);
 
         //添加item监听
-        recyclerViewAdapter.setItemClickListener(new RecyclerViewAdapter.OnRecyclerViewItemClickListener() {
+        recyclerViewAdapter.setOnItemClickListener(new RecyclerViewAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClickListener(View v, int position) {
                 Log.i("aaa","position="+position);

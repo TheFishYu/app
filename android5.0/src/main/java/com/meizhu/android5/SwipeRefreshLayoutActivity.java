@@ -3,6 +3,8 @@ package com.meizhu.android5;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,11 +26,30 @@ public class SwipeRefreshLayoutActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
     private SwipeRefreshLayout swipeRefreshLayout;
+    private FloatingActionButton floatingActionButton;
     List<RecyclerViewItem> data = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_swipe_refresh_layout);
+        setContentView(R.layout.activity_coodinatorlayout);
+
+        floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingactionbutton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar snackbar = Snackbar.make(v,"snackbar显示",Snackbar.LENGTH_SHORT);
+                View view = snackbar.getView();
+                view.setBackgroundColor(Color.BLUE);
+                snackbar.setAction("action", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getApplication(), "hah", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                snackbar.setActionTextColor(Color.parseColor("#ff0000"));
+                snackbar.show();
+            }
+        });
 
         initSwipeRefreshLayout();
         initRecyclerView();
@@ -53,7 +74,7 @@ public class SwipeRefreshLayoutActivity extends AppCompatActivity {
                     public void run() {
                         List<RecyclerViewItem> list = new ArrayList<RecyclerViewItem>();
                         for (int i = 0; i < 5; i++) {
-                            list.add(new RecyclerViewItem(R.drawable.pic1,"new data"+i));
+                            list.add(new RecyclerViewItem(R.drawable.spriderman4,"new data"+i));
                         }
                         //将list数据加在data之前
                         list.addAll(data);
@@ -89,7 +110,7 @@ public class SwipeRefreshLayoutActivity extends AppCompatActivity {
         recyclerView.setAdapter(recyclerViewAdapter);
 
         //添加item监听
-        recyclerViewAdapter.setItemClickListener(new RecyclerViewAdapter.OnRecyclerViewItemClickListener() {
+        recyclerViewAdapter.setOnItemClickListener(new RecyclerViewAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClickListener(View v, int position) {
                 Log.i("aaa","position="+position);
@@ -100,7 +121,7 @@ public class SwipeRefreshLayoutActivity extends AppCompatActivity {
 
     private void initData() {
         for (int i = 0; i < 20; i++) {
-            data.add(new RecyclerViewItem(R.mipmap.ic_launcher,"msg"+i));
+            data.add(new RecyclerViewItem(R.drawable.spriderman,"msg"+i));
         }
     }
 }

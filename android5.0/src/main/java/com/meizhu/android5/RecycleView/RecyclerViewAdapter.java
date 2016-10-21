@@ -34,7 +34,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private OnRecyclerViewItemClickListener listener;
 
-    public void setItemClickListener(OnRecyclerViewItemClickListener listener){
+    public void setOnItemClickListener(OnRecyclerViewItemClickListener listener){
         this.listener = listener;
     }
 

@@ -15,13 +15,15 @@
             android:id="@+id/iv"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:src="@drawable/pic1" />
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/spriderman4" />
 
         <TextView
             android:id="@+id/tv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:textColor="#fc7e7e"
             android:text="测试
         " />
     </LinearLayout>

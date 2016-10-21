@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.meizhu.service">
+          package="com.meizhu.service">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -11,8 +11,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".AIDLClientActivity">
+        <activity android:name=".MessengerServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -20,42 +19,52 @@
             </intent-filter>
         </activity>
 
-
-
         <service
             android:name=".startService.StartService01"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".startService.StartService02"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".startService.StartService03"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".startService.StartService05"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".boundService.BoundService02"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".intentService.IntentService01"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".intentService.IntentService02"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".boundService.BoundService01"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
 
+        <activity android:name="com.meizhu.Messenger.Main2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MessengerService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
     </application>
 
 </manifest>

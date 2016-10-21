@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".RecycleView.RecycleViewActivity" />
         <activity android:name=".CardviewActivity" />
-        <activity android:name=".SwipeRefreshLayoutActivity" />
+        <activity android:name=".SwipeRefreshLayoutActivity"
+            android:theme="@style/Theme.Design.NoActionBar"/>
         <activity android:name=".TextInputLayoutActivity" />
         <activity android:name=".TabLayout_ViewPager.TabLayoutActivity"></activity>
     </application>
